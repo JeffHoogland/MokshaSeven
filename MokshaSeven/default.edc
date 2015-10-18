@@ -50,6 +50,10 @@ data {
 	item: "version"         "110";
 }
 
+collections {
+#include "mokshapreview.edc"
+}
+
 /* Specturm used in all the gradient icons
  * This needs to be defined outside of the collections
  *
