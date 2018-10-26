@@ -35832,6 +35832,7 @@ group { name: "e/widgets/entry/selection";
                   size: 11;
                   align: 0.0 0.5;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "fileman_typebuf";
                }
             }
@@ -36527,6 +36528,7 @@ group { name: "e/widgets/entry/selection";
                   size: 9;
                   min: 0 1;
                   align: 0.0 1.0;
+                  ellipsis: -1;
                   text_class: "fileman_typebuf";
                }
             }
@@ -36559,6 +36561,7 @@ group { name: "e/widgets/entry/selection";
                   size: 9;
                   min: 0 1;
                   align: 1.0 0.0;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -36668,6 +36671,7 @@ group { name: "e/widgets/entry/selection";
                   size: 10;
                   min: 0 1;
                   align: 0.5 0.5;
+                  ellipsis: -1;
 	          text_class: "fileman_icon";
                }
             }
@@ -36718,6 +36722,7 @@ group { name: "e/widgets/entry/selection";
                   size: 9;
                   min: 0 1;
                   align: 0.5 0.5;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -36791,6 +36796,7 @@ group { name: "e/widgets/entry/selection";
                   size: 10;
                   min: 0 1;
                   align: 0.5 0.5;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -36841,6 +36847,7 @@ group { name: "e/widgets/entry/selection";
                   size: 9;
                   min: 0 1;
                   align: 0.5 0.5;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -36969,7 +36976,7 @@ group { name: "e/widgets/entry/selection";
                }
                rel2 {
                   relative: 1.0 1.0;
-                  offset: -5  -5;
+                  offset: -4  -2;
                }
                color: 255 255 255 128;
             }
@@ -37007,7 +37014,7 @@ group { name: "e/widgets/entry/selection";
                rel2 {
                   to: "base";
                   relative: 1.0 1.0;
-                  offset: -3  -11;
+                  offset: -3  -17;
                }
             }
          }
@@ -37060,42 +37067,28 @@ group { name: "e/widgets/entry/selection";
                visible: 1;
             }
          }
-         part {
-            name: "e.text.label";
-            type: TEXT;
-            clip_to: "base";
-            effect: SOFT_SHADOW;
-            mouse_events: 0;
-            scale: 1;
-            description {
-               state: "default" 0.0;
-               rel1 {
-                  offset: 2 -12;
-                  relative: 0.0 1.0;
-               }
-               rel2.offset: -2 -4;
-               color3: 20 20 20 60;
+         part { name: "e.text.label"; type: TEXT;
+         effect: SOFT_SHADOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            rel1.offset: 4 -5;
+            rel1.relative: 0.0 1.0;
+            rel2.offset: -5 3;
+            color3: 20 20 20 60;
                color: 255 255 255 255;
-               text {
-                  font: "Sans";
-                  size: 10;
-                  min: 0 1;
-                  align: 0.5 0.0;
-                  text_class: "fileman_icon";
-               }
-            }
-            description {
-               state: "selected" 0.0;
-	       inherit: "default" 0.0;
-               rel1 {
-                  offset: 2 -12;
-                  relative: 0.0 1.0;
-               }
-               rel2.offset: -2 -4;
-               color: 250 250 250 255;
-               color3: 20 20 20 40;
+            color_class: "fileman_icon";
+            align: 0.5 1.0;
+            text { font: FN; size: 10;
+               min: 0 1;
+               align: 0.5 1.0;
+               text_class: "fileman_icon";
             }
          }
+         description { state: "selected" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+      }
          part {
             name: "event";
             type: RECT;
@@ -37373,6 +37366,7 @@ group { name: "e/widgets/entry/selection";
                   size: 10;
                   min: 0 1;
                   align: 0.0 0.0;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -37410,6 +37404,7 @@ group { name: "e/widgets/entry/selection";
                   size: 8;
                   min: 0 1;
                   align: 0.0 0.0;
+                  ellipsis: -1;
                   text_class: "fileman_icon";
                }
             }
@@ -37990,6 +37985,7 @@ group { name: "e/widgets/entry/selection";
                text {
                   style: "everything_textblock_style";
                   min: 1 1;
+                  ellipsis: -1;
                }
             }
          }
