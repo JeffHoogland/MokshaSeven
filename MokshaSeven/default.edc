@@ -11444,6 +11444,7 @@ images
 						text_class: "module_small";
 						source: "load"; 
 						style: "cpu_style";
+                        ellipsis: -1;
 					}
 				}
 			}
@@ -14221,7 +14222,7 @@ programs {
                image.normal: "tacho_bg.png";
             }
          }
-         part {
+          part {
             name: "readout";
             type: TEXT;
             scale: 1;
@@ -14248,6 +14249,7 @@ programs {
                   size: 6;
                   align: 0.5 0.5;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -14633,7 +14635,7 @@ programs {
             description {
                state: "default" 0.0;
                rel1 {
-                  relative: 0.6 0.7;
+                  relative: 0.4 0.7;
                   offset: 0 0;
                }
                rel2 {
@@ -14650,6 +14652,7 @@ programs {
                   size: 6;
                   align: 0.5 0.5;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
