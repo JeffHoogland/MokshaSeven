@@ -40,6 +40,8 @@
  * replacement you will need to methodically go through all of this file
  * and make sure you have replaced/provided everything here.
  */
+ 
+efl_version: 1 20;
 
 data {
 	item: "theme/name" 		"seven";
