@@ -11199,6 +11199,7 @@ group {
                   size: 8;
                   min: 1 1;
                   align: 1.0 0.5;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -11221,6 +11222,7 @@ group {
                   size: 8;
                   min: 1 1;
                   align: 1.0 0.5;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
