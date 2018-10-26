@@ -17471,6 +17471,7 @@ programs {
          image: "mixer_med_right.png" COMP;
          image: "mixer_high_left.png" COMP;
          image: "mixer_high_right.png" COMP;
+         image: "mixer_mute.png" COMP;
       }
       max: 128 128;
       min: 1 1;
@@ -17596,6 +17597,24 @@ programs {
             }
          }
          part {
+            name: "speaker_mute";
+            type: IMAGE;
+            mouse_events: 0;
+            description {
+               state: "default" 0.0;
+               aspect: 1 1;
+               aspect_preference: BOTH;
+               image.normal: "mixer.png";
+            }
+            description {
+               state: "active" 0.0;
+               aspect: 1 1;
+               aspect_preference: BOTH;
+               image.normal: "mixer_mute.png";
+            }
+         }
+         
+         part {
             name: "over";
             type: RECT;
             description {
@@ -17611,13 +17630,13 @@ programs {
             name: "mute";
             action: STATE_SET "active" 0.0;
             transition: LINEAR 0.3;
-            target: "mute";
+            target: "speaker_mute";
          }
          program {
             name: "unmute";
             action: STATE_SET "default" 0.0;
             transition: LINEAR 0.2;
-            target: "mute";
+            target: "speaker_mute";
          }
          program {
             name: "left_none";
