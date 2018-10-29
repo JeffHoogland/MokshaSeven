@@ -36639,7 +36639,7 @@ group { name: "e/widgets/entry/selection";
                fixed: 0 1;
                rel1.to: "e.text.label";
                rel2.to: "e.text.label";
-               color: 0 0 0 255;
+               color: 255 255 255 255;
                text {
                   font: "Sans:style";
                   text_source: "e.text.label";
@@ -36679,7 +36679,7 @@ group { name: "e/widgets/entry/selection";
             name: "e.text.label";
             type: TEXT;
             mouse_events: 0;
-            clip_to: "clip";
+            //clip_to: "clip";
             scale: 1;
             mouse_events: 0;
             description {
@@ -36689,9 +36689,9 @@ group { name: "e/widgets/entry/selection";
                rel1.to:   "clip";
                rel2.to:   "clip";
                rel1.offset:   5 3;
-               rel2.offset:   -6 -1;
-               visible: 0;
-               color: 245 245 245 255;
+               rel2.offset:   -6 -3;
+               visible: 1;
+               color: 127 127 127 255;
                text {
                   font: "Sans:style=Bold";
                   size: 9;
@@ -36704,6 +36704,7 @@ group { name: "e/widgets/entry/selection";
             description {
                state: "selected" 0.0;
                inherit: "default" 0.0;
+               color: 245 245 245 255;
                visible: 1;
             }
          }
@@ -37050,7 +37051,7 @@ group { name: "e/widgets/entry/selection";
             rel1.relative: 0.0 1.0;
             rel2.offset: -5 3;
             color3: 20 20 20 60;
-               color: 255 255 255 255;
+            color: 255 255 255 255;
             color_class: "fileman_icon";
             align: 0.5 1.0;
             text { font: FN; size: 10;
