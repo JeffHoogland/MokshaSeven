@@ -11428,13 +11428,13 @@ images
 					state: "default" 0.0;
 					rel1
 					{
-						relative: 0.0 0.0;
+						relative: 0.0 0.05;
 						offset: 0 0;
 						to: "cpu";
 					}
 					rel2
 					{
-						relative: 1.0 1.0;
+						relative: 1.0 0.9;
 						offset: -1 -1;
 						to: "cpu";
 					}
@@ -11443,7 +11443,8 @@ images
 					text
 					{
 						text: "think!";
-						min: 0 0;
+						//min: 1 0;
+						fit: 1 1;
 						text_class: "module_small";
 						source: "load"; 
 						style: "cpu_style";
