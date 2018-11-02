@@ -126,7 +126,7 @@ color_classes {
    }
    color_class {
       name: "menu_item_active";
-      color: 255 255 255 255;
+      color: 0 0 0 155;
       color3: 0 0 0 14;
    }
    color_class {
@@ -210,8 +210,8 @@ color_classes {
    }
    color_class {
       name: "ilist_item_header";
-      color: 224 224 224 255;
-      color3: 0 0 0 36;
+      color: 0 0 0 155;
+      color3: 0 0 0 55;
    }
    color_class {
       name: "ilist_item_header_odd";
@@ -27718,11 +27718,11 @@ images
             mouse_events: 0;
             description {
                state: "default" 0.0;
-               fixed: 1 1;
+               fixed: 1 0;
                // aspect: 6.4 6.4;
                // aspect_preference: HORIZONTAL;
                align: 0.0 0.0;
-               min: 0 10;
+               //min: 0 10;
                rel1 {
                   to: "base";
                   relative: 0.0 1.0;
@@ -27807,7 +27807,7 @@ images
          part {
             name: "e.text.label";
             type: TEXT;
-            effect: SOFT_SHADOW;
+            effect: NONE;
             mouse_events: 0;
             scale: 1;
             description {
@@ -27825,7 +27825,7 @@ images
                color_class: "ilist_item_header";
                text {
                   font: "Sans:style=Bold";
-                  size: 16;
+                  size: 10;
                   min: 1 1;
                   align: 0.0 0.5;
                   text_class: "ilist_item";
