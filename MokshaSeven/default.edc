@@ -28337,7 +28337,7 @@ group { name: "e/widgets/entry/selection";
    parts {
       part { name: "selection"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
-            color: 152 205 87 255;
+            color: 107 169 227 255;
          }
       }
    }
