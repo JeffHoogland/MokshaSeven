@@ -1755,6 +1755,12 @@ scrollbar button:disabled {
 scrollbar.horizontal button {
     min-width: 16px;
     min-height: 15px;
+    background-image: linear-gradient(to bottom, shade(#ebebeb, 1.00) 50%,
+                                     shade(#dddddd, 1.00) 51%,
+                                     shade(#cfcfcf, 1.05));
+    color: @theme_fg_color;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #7e7e7e;
 }
 
 scrollbar.horizontal button.up {
@@ -1785,6 +1791,15 @@ scrollbar.horizontal button.down:hover {
 
 scrollbar.horizontal button.down:hover:active {
     background: url("assets/stepper-right-prelight.png");
+}
+
+scrollbar.vertical button {
+    background-image: linear-gradient(to right, shade(#ebebeb, 1.00) 50%,
+                                     shade(#dddddd, 1.00) 51%,
+                                     shade(#cfcfcf, 1.05));
+    color: @theme_fg_color;
+    box-shadow: inset 0 0 0 1px #7e7e7e;
+    border-radius: 3px;
 }
 
 scrollbar.vertical button.up {
