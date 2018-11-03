@@ -11911,6 +11911,7 @@ fonts
 						size: 13;
 						min: 1 1;
 						fit: 1 1;
+						ellipsis: -1;
 						text_class: "module_large";
 					}
 				}
@@ -11944,6 +11945,7 @@ fonts
 						size: 9;
 						min: 1 1;
 						fit: 1 1;
+						ellipsis: -1;
 						text_class: "module_large";
 					}
 				}
@@ -13680,6 +13682,7 @@ programs {
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -13743,6 +13746,7 @@ programs {
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
