@@ -28634,6 +28634,7 @@ group { name: "e/widgets/entry/selection";
          part {
             name: "content_clip";
             type: RECT;
+            mouse_events: 0;
             description {
                state: "default" 0.0;
                rel1.to: "e.swallow.content";
@@ -28647,14 +28648,35 @@ group { name: "e/widgets/entry/selection";
             clip_to: "content_clip";
             description {
                state: "default" 0.0;
-               //min: 30 20;
+               //min: 50 20;
                rel1.offset: 4    4;
                rel2.offset: -5    -5;
             }
             description {
                state: "vertical" 0.0;
                inherit: "default" 0.0;
-               min: 12 50;
+               min: 13 50;
+            }
+         }
+         part {
+            name: "border";
+            mouse_events: 0;
+            description {
+               state: "default" 0.0;
+               rel1 {
+                  to: "e.swallow.content";
+                  offset: -1 -1;
+               }
+               rel2 {
+                  to: "e.swallow.content";
+                  offset: 0 0;
+               }
+               image {
+                  normal: "inset_sunk.png";
+                  border: 7 7 7 7;
+                  middle: 0;
+               }
+               fill.smooth : 0;
             }
          }
          part {
@@ -28701,7 +28723,7 @@ group { name: "e/widgets/entry/selection";
                color: 255 255 255 150;
             }
          }
-         }
+      }
       programs {
          program {
             name: "go_vertical";
@@ -28712,7 +28734,6 @@ group { name: "e/widgets/entry/selection";
             target: "e.swallow.content";
          }
       }
-      
    }
    /* e/widgets/slider* is used in the Virtual Desktops Config dialog */
    group {
