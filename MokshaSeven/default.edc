@@ -106,6 +106,10 @@ color_classes {
       color3: 0 0 0 0;
    }
    color_class {
+      name: "tasks_text";
+      color: 0 0 0 255;
+   }
+   color_class {
       name: "menu_base";
       color: 255 255 255 255;
    }
@@ -126,7 +130,7 @@ color_classes {
    }
    color_class {
       name: "menu_item_active";
-      color: 255 255 255 255;
+      color: 0 0 0 155;
       color3: 0 0 0 14;
    }
    color_class {
@@ -210,8 +214,8 @@ color_classes {
    }
    color_class {
       name: "ilist_item_header";
-      color: 224 224 224 255;
-      color3: 0 0 0 36;
+      color: 0 0 0 155;
+      color3: 0 0 0 55;
    }
    color_class {
       name: "ilist_item_header_odd";
@@ -11428,13 +11432,13 @@ images
 					state: "default" 0.0;
 					rel1
 					{
-						relative: 0.0 0.0;
+						relative: 0.0 0.05;
 						offset: 0 0;
 						to: "cpu";
 					}
 					rel2
 					{
-						relative: 1.0 1.0;
+						relative: 1.0 0.9;
 						offset: -1 -1;
 						to: "cpu";
 					}
@@ -11443,7 +11447,8 @@ images
 					text
 					{
 						text: "think!";
-						min: 0 0;
+						//min: 1 0;
+						fit: 1 1;
 						text_class: "module_small";
 						source: "load"; 
 						style: "cpu_style";
@@ -11906,6 +11911,7 @@ fonts
 						size: 13;
 						min: 1 1;
 						fit: 1 1;
+						ellipsis: -1;
 						text_class: "module_large";
 					}
 				}
@@ -11939,6 +11945,7 @@ fonts
 						size: 9;
 						min: 1 1;
 						fit: 1 1;
+						ellipsis: -1;
 						text_class: "module_large";
 					}
 				}
@@ -13675,6 +13682,7 @@ programs {
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -13738,6 +13746,7 @@ programs {
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -27717,11 +27726,11 @@ images
             mouse_events: 0;
             description {
                state: "default" 0.0;
-               fixed: 1 1;
+               fixed: 1 0;
                // aspect: 6.4 6.4;
                // aspect_preference: HORIZONTAL;
                align: 0.0 0.0;
-               min: 0 10;
+               //min: 0 10;
                rel1 {
                   to: "base";
                   relative: 0.0 1.0;
@@ -27806,7 +27815,7 @@ images
          part {
             name: "e.text.label";
             type: TEXT;
-            effect: SOFT_SHADOW;
+            effect: NONE;
             mouse_events: 0;
             scale: 1;
             description {
@@ -27824,7 +27833,7 @@ images
                color_class: "ilist_item_header";
                text {
                   font: "Sans:style=Bold";
-                  size: 16;
+                  size: 10;
                   min: 1 1;
                   align: 0.0 0.5;
                   text_class: "ilist_item";
@@ -28336,7 +28345,7 @@ group { name: "e/widgets/entry/selection";
    parts {
       part { name: "selection"; type: RECT; mouse_events: 0;
          description { state: "default" 0.0;
-            color: 152 205 87 255;
+            color: 107 169 227 255;
          }
       }
    }
@@ -28639,19 +28648,19 @@ group { name: "e/widgets/entry/selection";
             clip_to: "content_clip";
             description {
                state: "default" 0.0;
-               min: 50 20;
+               //min: 50 20;
                rel1.offset: 4    4;
                rel2.offset: -5    -5;
             }
             description {
                state: "vertical" 0.0;
                inherit: "default" 0.0;
-               min: 20 50;
+               min: 13 50;
             }
          }
          part {
             name: "border";
-            mouse_events: 1;
+            mouse_events: 0;
             description {
                state: "default" 0.0;
                rel1 {
@@ -40070,8 +40079,8 @@ group { name: "e/widgets/entry/selection";
             }
             description { state: "iconified" 0.0;
                inherit: "default" 0.0;
-               rel1.relative: 0.0 0.25;
-               rel2.relative: 0.0 0.75;
+               rel1.relative: 0.0 0.15;
+               rel2.relative: 0.0 0.85;
             }
          }
          part { name: "icon_area2"; type: RECT;
@@ -40157,7 +40166,7 @@ group { name: "e/widgets/entry/selection";
             }
          }
          part { name: "e.text.label"; type: TEXT;
-            effect: SOFT_SHADOW;
+            //effect: SOFT_SHADOW;
             mouse_events: 0;
             scale: 1;
             description { state: "default" 0.0;
@@ -40172,7 +40181,7 @@ group { name: "e/widgets/entry/selection";
                   offset: -4   -4;
                   to: "button_image";
                }
-               color_class: "tasks_text";
+               color: 0 0 0 255;
                text {
                   font: "Sans";
                   size: 10;
@@ -40421,8 +40430,8 @@ group { name: "e/widgets/entry/selection";
             }
             description { state: "iconified" 0.0;
                inherit: "default" 0.0;
-               rel1.relative: 0.25 0.25;
-               rel2.relative: 0.75 0.75;
+               rel1.relative: 0.15 0.15;
+               rel2.relative: 0.85 0.85;
             }
          }
          part { name: "icon_area2"; type: RECT;
