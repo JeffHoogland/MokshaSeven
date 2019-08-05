@@ -9644,11 +9644,11 @@ group {
                action: STATE_SET "strength,1" 0.0;
                target: "eventarea.image";
             }
-            program {
-               name: "strength,0";
-               action: STATE_SET "strength,0" 0.0;
-               target: "eventarea.image";
-            }
+            //~ program {
+               //~ name: "strength,0";
+               //~ action: STATE_SET "strength,0" 0.0;
+               //~ target: "eventarea.image";
+            //~ }
             program {
                name: "strength,no";
                action: STATE_SET "strength,no" 0.0;
@@ -26503,7 +26503,7 @@ images
             source: "e";
             action: STATE_SET "combo" 0.0;
             target: "e.swallow.icon";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "disable";
@@ -27922,7 +27922,7 @@ images
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "go_passive";
@@ -28102,7 +28102,7 @@ images
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "go_passive";
@@ -30662,13 +30662,13 @@ group { name: "e/widgets/entry/selection";
             source: "overlay";
             action: SIGNAL_EMIT "e,action,move,go" "";
          }
-         program {
-            name: "h1_down1";
-            signal: "mouse,down,1";
-            source: "h1";
-            action: STATE_SET "clicked" 0.0;
-            target: "h1";
-         }
+         //~ program {
+            //~ name: "h1_down1";
+            //~ signal: "mouse,down,1";
+            //~ source: "h1";
+            //~ action: STATE_SET "clicked" 0.0;
+            //~ target: "h1";
+         //~ }
          program {
             name: "h1_up1";
             signal: "mouse,up,1";
@@ -30694,13 +30694,13 @@ group { name: "e/widgets/entry/selection";
             source: "h1";
             action: SIGNAL_EMIT "e,action,resize,left,go" "";
          }
-         program {
-            name: "h2_down1";
-            signal: "mouse,down,1";
-            source: "h2";
-            action: STATE_SET "clicked" 0.0;
-            target: "h2";
-         }
+         //~ program {
+            //~ name: "h2_down1";
+            //~ signal: "mouse,down,1";
+            //~ source: "h2";
+            //~ action: STATE_SET "clicked" 0.0;
+            //~ target: "h2";
+         //~ }
          program {
             name: "h2_up1";
             signal: "mouse,up,1";
@@ -30726,13 +30726,13 @@ group { name: "e/widgets/entry/selection";
             source: "h2";
             action: SIGNAL_EMIT "e,action,resize,right,go" "";
          }
-         program {
-            name: "v1_down1";
-            signal: "mouse,down,1";
-            source: "v1";
-            action: STATE_SET "clicked" 0.0;
-            target: "v1";
-         }
+         //~ program {
+            //~ name: "v1_down1";
+            //~ signal: "mouse,down,1";
+            //~ source: "v1";
+            //~ action: STATE_SET "clicked" 0.0;
+            //~ target: "v1";
+         //~ }
          program {
             name: "v1_up1";
             signal: "mouse,up,1";
@@ -30758,13 +30758,13 @@ group { name: "e/widgets/entry/selection";
             source: "v1";
             action: SIGNAL_EMIT "e,action,resize,up,go" "";
          }
-         program {
-            name: "v2_down1";
-            signal: "mouse,down,1";
-            source: "v2";
-            action: STATE_SET "clicked" 0.0;
-            target: "v2";
-         }
+         //~ program {
+            //~ name: "v2_down1";
+            //~ signal: "mouse,down,1";
+            //~ source: "v2";
+            //~ action: STATE_SET "clicked" 0.0;
+            //~ target: "v2";
+         //~ }
          program {
             name: "v2_up1";
             signal: "mouse,up,1";
@@ -34681,8 +34681,8 @@ group { name: "e/widgets/entry/selection";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }
@@ -34962,8 +34962,8 @@ group { name: "e/widgets/entry/selection";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             target: "theme";
             after: "thumb_gen2";
@@ -35175,8 +35175,8 @@ group { name: "e/widgets/entry/selection";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }
