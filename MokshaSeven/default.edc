@@ -12121,6 +12121,12 @@ group {
 	    state: "faded" 0.0;
 	    color: 255 255 255 128;
 	 }
+	 description {
+	    aspect: 1.0 1.0;
+	    aspect_preference: BOTH;
+	    state: "high" 0.0;
+	    color: 255 0 0 225;
+	 }
       }
 
       part {
@@ -12210,6 +12216,31 @@ programs {
 	 action: STATE_SET "faded" 0.0;
 	 target: "fade_clip";
       }
+		program {
+			signal: "e,state,high"; source: "e";
+			action: STATE_SET "default" 0.0;
+			target: "fade_clip";
+			after: "pulse1";
+		}
+		program {
+			name: "pulse1"; 
+			action: STATE_SET "high" 0.0;
+			transition: DECELERATE 0.5;
+			target: "fade_clip";
+			after: "pulse2";
+		}
+		program {
+			name: "pulse2"; 
+			action: STATE_SET "default" 0.0;
+			transition: ACCELERATE 0.5;
+			target: "fade_clip";
+			after: "pulse1";
+		}
+		program {
+			signal: "e,state,ok"; source: "e";
+			action: STATE_SET "default" 0.0;
+			target: "fade_clip";
+		}
    }
 }
 
