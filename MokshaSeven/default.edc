@@ -8434,7 +8434,7 @@ group {
          image: "connman-connecting-3.png" COMP;
          image: "connman-connecting-4.png" COMP;
          image: "connman-ethernet.png" COMP;
-         image: "connman-wifi.png" COMP;
+         //~ image: "connman-wifi.png" COMP;
       }
       min: 350 148;
       script {
@@ -12309,7 +12309,7 @@ programs {
       min: 56 16;
       max: 512 128;
       images {
-         image: "flip_base.png" COMP;
+         //~ image: "flip_base.png" COMP;
          image: "flip_base_shad.png" COMP;
          image: "flip_shad.png" COMP;
          image: "flip_0t.png" COMP;
