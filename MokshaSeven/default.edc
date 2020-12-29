@@ -12677,7 +12677,7 @@ programs {
          }
          
 #define DIGIT(nom, relto, clipto) \
-         part { name: nom"base"; \
+         part { name: nom"base"; type: RECT; \
             scale: 1; \
             description { state: "default" 0.0; \
                rel1.to: relto; \
