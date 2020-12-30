@@ -628,6 +628,17 @@ group {
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
+               image {
+                  tween: "busy-1.png";
+                  tween: "busy-2.png";
+                  tween: "busy-3.png";
+                  tween: "busy-4.png";
+                  tween: "busy-5.png";
+                  tween: "busy-6.png";
+                  tween: "busy-7.png";
+                  tween: "busy-8.png";
+                  normal: "busy-9.png";
+               } 
             }
          }
          part {
@@ -1996,6 +2007,17 @@ group {
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
+               image {
+                  tween: "busy-1.png";
+                  tween: "busy-2.png";
+                  tween: "busy-3.png";
+                  tween: "busy-4.png";
+                  tween: "busy-5.png";
+                  tween: "busy-6.png";
+                  tween: "busy-7.png";
+                  tween: "busy-8.png";
+                  normal: "busy-9.png";
+               } 
             }
          }
          part {
@@ -3129,6 +3151,17 @@ group {
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
+               image {
+                  tween: "busy-1.png";
+                  tween: "busy-2.png";
+                  tween: "busy-3.png";
+                  tween: "busy-4.png";
+                  tween: "busy-5.png";
+                  tween: "busy-6.png";
+                  tween: "busy-7.png";
+                  tween: "busy-8.png";
+                  normal: "busy-9.png";
+               } 
             }
          }
          part {
@@ -4067,6 +4100,17 @@ group {
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
+               image {
+                  tween: "busy-1.png";
+                  tween: "busy-2.png";
+                  tween: "busy-3.png";
+                  tween: "busy-4.png";
+                  tween: "busy-5.png";
+                  tween: "busy-6.png";
+                  tween: "busy-7.png";
+                  tween: "busy-8.png";
+                  normal: "busy-9.png";
+               } 
             }
          }
          part {
@@ -5024,6 +5068,17 @@ group {
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
+               image {
+                  tween: "busy-1.png";
+                  tween: "busy-2.png";
+                  tween: "busy-3.png";
+                  tween: "busy-4.png";
+                  tween: "busy-5.png";
+                  tween: "busy-6.png";
+                  tween: "busy-7.png";
+                  tween: "busy-8.png";
+                  normal: "busy-9.png";
+               } 
             }
          }
          part {
@@ -13088,7 +13143,7 @@ programs {
          DIGIT("s2", "secs2", "sclip");
 
 #define DIGAP(nom, relto, clipto) \
-         part { name: nom"base"; \
+         part { name: nom"base"; type: RECT; \
             scale: 1; \
             description { state: "default" 0.0; \
                rel1.to: relto; \
