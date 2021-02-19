@@ -48,10 +48,10 @@ data {
 	item: "theme/version"	"0.1.0";
 	item: "theme/author"	"Bodhi Team";
 	item: "theme/license"	"BSD Artistic License";
-	item: "gtk-theme"       "Windows Vista";
-	item: "icon-theme"      "Icons-Moksha-Seven"; 
-    item: "elm-theme"       "MokshaRadiance";
-	item: "version"         "110";
+	item: "gtk-theme"     "Windows Vista";
+	item: "icon-theme"    "MokshaSeven-Icons"; 
+  item: "elm-theme"     "MokshaRadiance";
+	item: "version"       "110";
 }
 
 collections {
@@ -136,7 +136,7 @@ color_classes {
    }
    color_class {
       name: "menu_item_disabled";
-      color: 110 110 110 255;
+      color: 196 196 196 255;
       color3: 0 0 0 0;
    }
    color_class {
