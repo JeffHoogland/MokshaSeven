@@ -13798,7 +13798,7 @@ programs {
             }
          }
          part { name: "day"; type: RECT;
-            mouse_events: 0;
+            mouse_events: 1;
             clip_to: "hidden";
             description { state: "default" 0.0;
                color: 255 255 255 0;
@@ -13810,6 +13810,10 @@ programs {
                color: 0 0 0 200;
             }
          }
+         program { name: "date_clicked";
+            signal: "mouse,clicked,1*"; source: "day";
+            action: SIGNAL_EMIT "e,action,date,get" "";
+         } 
          part { name: "e.text.label";
             type: TEXT;
             scale: 1;
