@@ -12472,8 +12472,15 @@ programs {
                s2valset(v % 10);
             }
             else {
-               tim = timer(60.0 - (second), "clock_cb", 1);
+              //a dirty solution for 1 minut delay to show right 24h value
+               v = round(second);
+               tim = timer(1.0 - (second - v), "clock_cb", 1);
+               // set seconds to v
+               s1valset(v / 10);
+               s2valset(v % 10);
+               //~ tim = timer(1.0 - (second), "clock_cb", 1);
             }
+
             set_int(tick_timer, tim);
 
             // set minutes to minute
@@ -15821,7 +15828,7 @@ programs {
                state: "default" 0.0;
                visible: 0;
                color: 0 0 0 0;
-               rel1.offset: 10 0;
+               rel1.offset: 10 3;
                rel2.offset: -10 -1;
                color: 255 0 0 255;
             }
