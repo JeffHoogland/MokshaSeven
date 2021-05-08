@@ -12406,10 +12406,6 @@ programs {
             if (pos >= 1.0) { \
                set_state(PART:nom"sh", "default", 0.0); \
                set_int(ns ## v0_lock, 0); \
-               v = get_int(ns ## v0_next); \
-               if (v >= 0) { \
-                  set_int(ns ## v0_next, -1); \
-               } \
             } \
          } \
          public ns ## animator1(val, Float:pos) { \
@@ -12423,12 +12419,11 @@ programs {
          } \
          public ns ## valset(value) { \
             new v, buf[11]; \
-            if (get_int(ns ## v0_lock) == 1) { \
-               set_int(ns ## v0_next, value); \
-               return; \
-            } \
             v = get_int(ns ## v0_cur); \
             if (v == value) return; \
+            if (get_int(ns ## v0_lock) == 1) { \
+               set_state(PART:nom"sh", "default", 0.0); \
+            } \
             set_int(ns ## v0_pre, v); \
             set_int(ns ## v0_cur, value); \
             set_int(ns ## v0_lock, 1); \
@@ -12472,15 +12467,8 @@ programs {
                s2valset(v % 10);
             }
             else {
-              //a dirty solution for 1 minut delay to show right 24h value
-               v = round(second);
-               tim = timer(1.0 - (second - v), "clock_cb", 1);
-               // set seconds to v
-               s1valset(v / 10);
-               s2valset(v % 10);
-               //~ tim = timer(1.0 - (second), "clock_cb", 1);
+               tim = timer(60.0 - (second), "clock_cb", 1);
             }
-
             set_int(tick_timer, tim);
 
             // set minutes to minute
@@ -13402,6 +13390,7 @@ programs {
          }
       }
    }
+
    group { name: "e/modules/clock/main";
       images {
          image: "clock_base.png" COMP;
