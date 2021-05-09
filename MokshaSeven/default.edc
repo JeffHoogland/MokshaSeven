@@ -15818,7 +15818,7 @@ programs {
                visible: 0;
                color: 0 0 0 0;
                rel1.offset: 10 3;
-               rel2.offset: -10 -1;
+               rel2.offset: -10 -3;
                color: 255 0 0 255;
             }
             description { state: "vertical" 0.0;
